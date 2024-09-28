@@ -9,8 +9,8 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "websitie_template",
+    "title": "小鸡毛和小白的心心",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "import numpy as np import matplotlib.pyplot as plt\ndef heart_curve(t, shift=0): x = 16 * np.sin(t)**3 y = 13 * np.cos(t) - 5 * np.cos(2t) - 2  np.cos(3t) - np.cos(4t) return x + shift, y\n\n生成点\nt = np.linspace(0, 2*np.pi, 1000) x1, y1 = heart_curve(t, shift=-10) # 左边的心 x2, y2 = heart_curve(t, shift=10) # 右边的心\n\n\n创建图形\nplt.figure(figsize=(12, 8))\n\n\n绘制左边的心\nplt.plot(x1, y1, color=‘red’) plt.fill(x1, y1, color=‘pink’, alpha=0.5)\n\n\n绘制右边的心\nplt.plot(x2, y2, color=‘red’) plt.fill(x2, y2, color=‘pink’, alpha=0.5)\n\n\n设置图形\nplt.axis(‘equal’) plt.axis(‘off’)\n\n\n显示图形\nplt.show()"
   }
 ]
