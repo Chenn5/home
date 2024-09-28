@@ -107,19 +107,8 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#生成点" id="toc-生成点" class="nav-link active" data-scroll-target="#生成点">生成点</a></li>
-  <li><a href="#创建图形" id="toc-创建图形" class="nav-link" data-scroll-target="#创建图形">创建图形</a></li>
-  <li><a href="#绘制左边的心" id="toc-绘制左边的心" class="nav-link" data-scroll-target="#绘制左边的心">绘制左边的心</a></li>
-  <li><a href="#绘制右边的心" id="toc-绘制右边的心" class="nav-link" data-scroll-target="#绘制右边的心">绘制右边的心</a></li>
-  <li><a href="#设置图形" id="toc-设置图形" class="nav-link" data-scroll-target="#设置图形">设置图形</a></li>
-  <li><a href="#显示图形" id="toc-显示图形" class="nav-link" data-scroll-target="#显示图形">显示图形</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -143,34 +132,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>import numpy as np import matplotlib.pyplot as plt</p>
-<p>def heart_curve(t, shift=0): x = 16 * np.sin(t)**3 y = 13 * np.cos(t) - 5 * np.cos(2<em>t) - 2 </em> np.cos(3<em>t) - np.cos(4</em>t) return x + shift, y</p>
-<section id="生成点" class="level1">
-<h1>生成点</h1>
-<p>t = np.linspace(0, 2*np.pi, 1000) x1, y1 = heart_curve(t, shift=-10) # 左边的心 x2, y2 = heart_curve(t, shift=10) # 右边的心</p>
-</section>
-<section id="创建图形" class="level1">
-<h1>创建图形</h1>
-<p>plt.figure(figsize=(12, 8))</p>
-</section>
-<section id="绘制左边的心" class="level1">
-<h1>绘制左边的心</h1>
-<p>plt.plot(x1, y1, color=‘red’) plt.fill(x1, y1, color=‘pink’, alpha=0.5)</p>
-</section>
-<section id="绘制右边的心" class="level1">
-<h1>绘制右边的心</h1>
-<p>plt.plot(x2, y2, color=‘red’) plt.fill(x2, y2, color=‘pink’, alpha=0.5)</p>
-</section>
-<section id="设置图形" class="level1">
-<h1>设置图形</h1>
-<p>plt.axis(‘equal’) plt.axis(‘off’)</p>
-</section>
-<section id="显示图形" class="level1">
-<h1>显示图形</h1>
-<p>plt.show()</p>
+<div id="cell-fig-heart" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div id="fig-heart" class="quarto-float quarto-figure quarto-figure-center anchored" alt="两颗心">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-heart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-heart-output-1.png" alt="两颗心" width="912" height="611" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-heart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: 小鸡毛和小白心连心
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
